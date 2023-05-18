@@ -1,7 +1,7 @@
 ARG CUDA_VERSION=11.0
 ARG LINUX_VERSION=ubuntu18.04
 ARG PYTHON_VERSION=3.8
-FROM nvcr.io/nvidia/rapidsai/rapidsai-core:${RAPIDS_VERSION}-cuda${CUDA_VERSION}-base-${LINUX_VERSION}-py${PYTHON_VERSION}
+FROM nvcr.io/nvidia/rapidsai/rapidsai-core:${RAPIDS_VERSION}cuda${CUDA_VERSION}-base-${LINUX_VERSION}-py${PYTHON_VERSION}
 
 WORKDIR /rapids/
 RUN mkdir plotly_census_demo
