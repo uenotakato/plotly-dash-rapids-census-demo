@@ -12,6 +12,11 @@ WORKDIR /rapids/plotly_census_demo/data
 
 WORKDIR /rapids/plotly_census_demo
 
+# Copy the environment file separately to leverage cache
+COPY environment_for_docker.yml .
+
+SHELL ["/bin/bash", "-c"]
+
 COPY . .
 
 RUN source activate rapids && mamba env update --file environment_for_docker.yml
